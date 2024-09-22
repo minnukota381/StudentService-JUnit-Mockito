@@ -1,4 +1,4 @@
-# StudentServiceTestDemo-JUnit-Mockito
+# StudentService-JUnit-Mockito
 
 This project demonstrates unit testing with **JUnit 5** and **Mockito** for a simple Spring Boot application. It focuses on testing the service layer of a student management system by mocking the repository layer, thus isolating the service logic from the actual database operations.
 
