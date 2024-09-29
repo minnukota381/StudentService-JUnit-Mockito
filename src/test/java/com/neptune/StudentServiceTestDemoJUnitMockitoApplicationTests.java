@@ -17,16 +17,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(MockitoExtension.class)
 public class StudentServiceTestDemoJUnitMockitoApplicationTests {
     @Mock
-    private StudentRepository studentRepository;
+    private StudentRepository stR;
 
     @InjectMocks
-    private StudentService studentService;
+    private StudentService stS;
 
     @Test
     public void testGetStudentById() {
         Student mockStudent = new Student(1, "Helcy");
-        Mockito.when(studentRepository.findById(1)).thenReturn(Optional.of(mockStudent));
-        Student result = studentService.getStudentById(1);
-        assertEquals("Helcy", result.getName());
+        Mockito.when(stR.findById(1)).thenReturn(Optional.of(mockStudent));
+        Student r = stS.getStudentById(1);
+        assertEquals("Helcy", r.getName());
     }
 }
